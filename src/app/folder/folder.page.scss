@@ -26,3 +26,116 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.page-content {
+  padding: 16px;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.map-container {
+  height: 250px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  border: 2px solid var(--ion-color-light);
+
+  // Đảm bảo bản đồ không chiếm toàn màn hình
+  #map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.map-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--ion-color-light);
+
+  p {
+    margin-top: 8px;
+    color: var(--ion-color-medium);
+    font-size: 14px;
+  }
+}
+
+.location-info {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--ion-color-light);
+  border-radius: 8px;
+
+  h4 {
+    margin: 0 0 8px 0;
+    color: var(--ion-color-primary);
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
+}
+
+// Custom icon styles for map markers
+.custom-icon {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.university-icon {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hospital-icon {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+// Fix cho Leaflet map container
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .map-container {
+    height: 200px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 180px;
+    max-width: 280px;
+  }
+}
+
+// Card spacing
+ion-card {
+  margin-bottom: 16px;
+}
+
+// Icon spacing in lists
+ion-item ion-icon[slot="start"] {
+  margin-right: 16px;
+}

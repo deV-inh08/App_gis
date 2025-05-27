@@ -25,6 +25,9 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+/* Leaflet CSS */
+// @import "~leaflet/dist/leaflet.css";
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -35,3 +38,25 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Fix for Leaflet icons in Ionic */
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  pointer-events: auto;
+}
+
+/* Fix Leaflet container trong Ionic */
+.leaflet-container {
+  background: #fff;
+  position: relative !important;
+}
+
+/* Đảm bảo map không overflow */
+ion-content .map-container {
+  overflow: hidden;
+  position: relative;
+  contain: layout style paint;
+}
