@@ -132,6 +132,7 @@
   </div>
 
   <!-- TRANG KHÁM PHÁ BẢN ĐỒ -->
+  <!-- TRANG KHÁM PHÁ BẢN ĐỒ -->
   <div *ngIf="folder === 'explore'" class="page-content">
     <ion-card>
       <ion-card-header>
@@ -165,7 +166,10 @@
       </ion-card-content>
     </ion-card>
 
-    <div id="map" class="map-container"></div>
+    <!-- FIX: Map container đơn giản hóa -->
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
 
     <ion-card>
       <ion-card-header>
